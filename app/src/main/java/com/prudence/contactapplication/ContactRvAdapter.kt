@@ -1,10 +1,12 @@
 package com.prudence.contactapplication
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationItemView
 import com.prudence.contactapplication.databinding.ActivityMainBinding
@@ -29,6 +31,24 @@ class ContactRvAdapter (var contactList:List<Contact>):RecyclerView.Adapter<Cont
             .centerCrop()
             .placeholder(R.drawable.ic_baseline_person_add_24)
             .into(holder.binding.ivcontact)
+
+        val context=holder.itemView.context
+        holder.binding.ivcontact.setOnClickListener {
+            Toast
+                .makeText(context,"you have clicked an image",Toast.LENGTH_LONG)
+                .show()
+        }
+        holder.binding.cvContacts.setOnClickListener {
+            val intent=Intent(context,ViewContactActivity::class.java)
+            intent.putExtra("NAME",currntContact.name)
+            intent.putExtra("ADDRESS",currntContact.address)
+            context.startActivity(intent)
+        }
+        holder.binding.cvContacts.setOnClickListener {
+            val intent=Intent(context,ViewContactActivity::class.java)
+            intent.putExtra("PHONENUMBER",currntContact.phoneNumber)
+            intent.putExtra("AUDIO",currntContact.Image)
+        }
     }
 
     override fun getItemCount(): Int {

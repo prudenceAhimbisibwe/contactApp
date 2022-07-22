@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvContacts"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/ivperson"
+            android:layout_width="169dp"
+            android:layout_height="73dp"
+            android:layout_marginStart="103dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="120dp"
+            android:src="@drawable/ic_baseline_person_add_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tvName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="97dp"
+            android:text="@string/prudence"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/ivperson"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivcall"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="150dp"
+            android:src="@drawable/ic_baseline_call_24"
+            app:layout_constraintEnd_toStartOf="@+id/tvnumber"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvnumber"
+            android:layout_width="228dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="68dp"
+            android:text="@string/_0784017930"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivcall"
+            app:layout_constraintTop_toTopOf="@+id/ivcall" />
+
+        <ImageView
+            android:id="@+id/ivsms"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:src="@drawable/sms_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvnumber"
+            app:layout_constraintTop_toTopOf="@+id/tvnumber" />
+
+        <ImageView
+            android:id="@+id/ivwhatsapp"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:src="@drawable/img"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/tvnumber1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivcall" />
+
+        <TextView
+            android:id="@+id/tvnumber1"
+            android:layout_width="228dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="68dp"
+            android:text="Audio call 0784017930"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivwhatsapp"
+            app:layout_constraintTop_toTopOf="@+id/ivwhatsapp" />
+
+        <ImageView
+            android:id="@+id/ivvideocall"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_baseline_video_call_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.026"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvnumber1" />
+
+        <TextView
+            android:id="@+id/tvnumber2"
+            android:layout_width="228dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="68dp"
+            android:text="Video call 0784017930"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.96"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivvideocall" />
+
+        <ImageView
+            android:id="@+id/ivrecording"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_baseline_record_voice_over_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvnumber2" />
+
+        <TextView
+            android:id="@+id/tvrecording"
+            android:layout_width="228dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="60dp"
+            android:text="Voice Recording"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivvideocall" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
