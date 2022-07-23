@@ -38,16 +38,19 @@ class ContactRvAdapter (var contactList:List<Contact>):RecyclerView.Adapter<Cont
                 .makeText(context,"you have clicked an image",Toast.LENGTH_LONG)
                 .show()
         }
-        holder.binding.cvContacts.setOnClickListener {
+        holder.binding.cvcontact.setOnClickListener {
             val intent=Intent(context,ViewContactActivity::class.java)
             intent.putExtra("NAME",currntContact.name)
             intent.putExtra("ADDRESS",currntContact.address)
+            intent.putExtra("PHONE",currntContact.phoneNumber)
+            intent.putExtra("VoiceCall",currntContact.phoneNumber)
+            intent.putExtra("VideoCall",currntContact.phoneNumber)
+            intent.putExtra("IMAGE",currntContact.Image)
             context.startActivity(intent)
-        }
-        holder.binding.cvContacts.setOnClickListener {
-            val intent=Intent(context,ViewContactActivity::class.java)
-            intent.putExtra("PHONENUMBER",currntContact.phoneNumber)
-            intent.putExtra("AUDIO",currntContact.Image)
+            holder.binding.ivcontact.setOnClickListener{
+                Toast.makeText(context,"You have clicked the person",Toast.LENGTH_LONG)
+                    .show()
+            }
         }
     }
 
